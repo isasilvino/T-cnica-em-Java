@@ -1,0 +1,31 @@
+   Scanner teclado = new Scanner(System.in);
+
+        int soma, a = 0, b = 1;
+
+        System.out.println("Digite um numero: ");
+        int resp = teclado.nextInt();
+
+        System.out.println("Sequencia de Fibonaci até " + resp);
+
+        System.out.println(a + " ");
+
+        while (b <= resp) {
+
+            System.out.println(b + " ");
+            soma = a + b;
+            a = b;
+            b = soma;
+
+        }
+        System.out.println();
+        if (resp == a || resp == b) {
+            System.out.println("Este numero pertence a sequencia de Fibonacci");
+
+        } else {
+            System.out.println("Este numero nao pertence a sequencia de Fibonacci");
+        }
+        teclado.close();
+
+    }
+
+}
