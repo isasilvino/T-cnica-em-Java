@@ -1,0 +1,39 @@
+  //Vetor com o valores do faturamento diário
+         double[] faturamentoDiario = {1200.5, 1500.0, 1800.75, 950.0, 1050.3, 2000.0, 1300.6, 900.5, 2100.0, 1700.0, 1000.0, 1600.5, 2000.75, 1550.5, 1850.0, 950.0, 1200.6, 1750.0, 1150.7, 1950.0, 1300.9, 1450.0, 1250.5, 1100.0, 1050.0, 980.0, 1350.0, 1650.0, 2000.0, 1900.0};
+
+        //Varáveis para armazenar os resultados
+        double menor = faturamentoDiario[0];
+        double maior = faturamentoDiario[0];
+        double soma = 0.0;
+        int acima = 0;
+
+        //Loop para percorrer o vator para calcular menor, maior e a soma de todos os faturamentos
+        for (double valor : faturamentoDiario) {
+            if (valor < menor) {
+                menor = valor;
+            }
+            if (valor > maior) {
+                maior = valor;
+            }
+            soma += valor;
+        }
+
+        // Calculo da média mensal
+        
+        double mediaMensal = soma / faturamentoDiario.length;
+
+       // Contador dos dias que atingiram faturamento acima da média 
+        for (double valor : faturamentoDiario) {
+            if (valor > mediaMensal) {
+                acima++;
+            }
+        }
+
+        
+        System.out.println("Menor valor de faturamento: " + menor);
+        System.out.println("Maior valor de faturamento: " + maior);
+        System.out.println("Numero de dias com faturamento acima da media mensal: " + acima);
+    }
+}
+
+    
