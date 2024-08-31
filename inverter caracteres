@@ -1,0 +1,24 @@
+       Scanner teclado = new Scanner(System.in);
+
+        // Solicita ao usuário para informar a string
+        System.out.println("Digite uma palavra e iremos inverte-la: ");
+        String original = teclado.nextLine();
+        
+        // Converte a string em um array de caracteres
+        char[] caracteres = original.toCharArray();
+        
+        // Inicializa uma nova string que armazena a String invertida
+        String invertida = "";
+
+        // Loop para inverter os caracteres
+        for (int i = caracteres.length - 1; i >= 0; i--) {
+            invertida += caracteres[i];
+        }
+        
+        
+        System.out.println("String invertida: " + invertida);
+
+        teclado.close();
+    }
+}
+   
